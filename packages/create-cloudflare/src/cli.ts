@@ -78,6 +78,7 @@ const validateName = async (
 		defaultValue: name ?? new Haikunator().haikunate({ tokenHex: true }),
 		acceptDefault,
 		validate: validateProjectDirectory,
+		format: (val: string) => `./${val}`,
 	});
 };
 

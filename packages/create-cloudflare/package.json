@@ -60,7 +60,7 @@
 		"open": "^8.4.0",
 		"recast": "^0.22.0",
 		"typescript": "^5.0.2",
-		"undici": "^5.22.0",
+		"undici": "5.20.0",
 		"vite-tsconfig-paths": "^4.0.8",
 		"vitest": "^0.30.0",
 		"which-pm-runs": "^1.1.0",
