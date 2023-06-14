@@ -43,9 +43,7 @@ export const setupProjectDirectory = (args: PagesGeneratorArgs) => {
 	const path = resolve(args.projectName);
 	const err = validateProjectDirectory(path);
 	if (err) {
-		crash(
-			`Directory \`${path}\` already exists and is not empty. Please choose a new name.`
-		);
+		crash(err);
 	}
 
 	const directory = dirname(path);
