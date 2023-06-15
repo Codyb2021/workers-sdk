@@ -1,5 +1,25 @@
 # wrangler
 
+## 3.1.1
+
+### Patch Changes
+
+- [#3431](https://github.com/cloudflare/workers-sdk/pull/3431) [`68ba49a8`](https://github.com/cloudflare/workers-sdk/commit/68ba49a8c5bde2e9847e9599d71b9a501866c54b) Thanks [@Cherry](https://github.com/Cherry)! - fix: allow context.data to be overriden in Pages Functions
+
+* [#3414](https://github.com/cloudflare/workers-sdk/pull/3414) [`6b1870ad`](https://github.com/cloudflare/workers-sdk/commit/6b1870ad46eb8557a01fcfae0d3f948b804387a0) Thanks [@rozenmd](https://github.com/rozenmd)! - fix: in D1, lift error.cause into the error message
+
+  Prior to this PR, folks _had_ to console.log the `error.cause` property to understand why their D1 operations were failing. With this PR, `error.cause` will continue to work, but we'll also lift the cause into the error message.
+
+- [#3359](https://github.com/cloudflare/workers-sdk/pull/3359) [`5eef992f`](https://github.com/cloudflare/workers-sdk/commit/5eef992f2c9f71a4c9d5e0cc2820aad24b7ef382) Thanks [@RamIdeas](https://github.com/RamIdeas)! - `wrangler init ... -y` now delegates to C3 without prompts (respects the `-y` flag)
+
+* [#3434](https://github.com/cloudflare/workers-sdk/pull/3434) [`4beac418`](https://github.com/cloudflare/workers-sdk/commit/4beac41818b89727cd991848a8c643d744bc1703) Thanks [@rozenmd](https://github.com/rozenmd)! - fix: add the number of read queries and write queries in the last 24 hours to the `d1 info` command
+
+- [#3454](https://github.com/cloudflare/workers-sdk/pull/3454) [`a2194043`](https://github.com/cloudflare/workers-sdk/commit/a2194043c6c755e9308b3ffc1e9afb0d1544f6b9) Thanks [@mrbbot](https://github.com/mrbbot)! - chore: upgrade `miniflare` to `3.0.1`
+
+  This version ensures root CA certificates are trusted on Windows.
+  It also loads extra certificates from the `NODE_EXTRA_CA_CERTS` environment variable,
+  allowing `wrangler dev` to be used with Cloudflare WARP enabled.
+
 ## 3.1.0
 
 ### Minor Changes
